@@ -1,9 +1,9 @@
-package dev.mammet.weatherkmp.geo_location.local
+package dev.mammet.weatherkmp.geo_location.data.local
 
 import androidx.room.ConstructedBy
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import dev.mammet.weatherkmp.geo_location.local.models.GeolocationEntity
+import dev.mammet.weatherkmp.geo_location.data.local.models.GeolocationEntity
 
 @Database(entities = [GeolocationEntity::class], version = 1)
 @ConstructedBy(GeolocationConstructor::class)

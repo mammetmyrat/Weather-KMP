@@ -1,4 +1,4 @@
-package dev.mammet.weatherkmp.geo_location.remote.models
+package dev.mammet.weatherkmp.geo_location.data.remote.models
 
 
 import kotlinx.serialization.SerialName

@@ -1,4 +1,4 @@
-package dev.mammet.weatherkmp.geo_location.local
+package dev.mammet.weatherkmp.geo_location.data.local
 
 import androidx.room.Room
 import androidx.room.RoomDatabase
