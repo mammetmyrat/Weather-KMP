@@ -3,9 +3,9 @@ package dev.mammet.weatherkmp.utils
 
 object K {
     fun flagUrl(countryCode:String): FlagUrl = "https://flagsapi.com/$countryCode/flat/64.png"
-    const val FORECAST_BASE_URL = "https://api.open-meteo.com/v1/"
+    const val WEATHER_BASE_URL = "https://api.open-meteo.com/v1/"
     const val GEO_CODING_BASE_URL = "https://geocoding-api.open-meteo.com/v1/"
-    const val FORECAST_END_POINT = "forecast"
+    const val WEATHER_END_POINT = "forecast"
     const val GEO_CODING_END_POINT = "search"
 }
 
