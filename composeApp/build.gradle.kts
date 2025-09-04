@@ -132,7 +132,7 @@ compose.desktop {
             packageVersion = "1.0.0"
 
             windows {
-                iconFile.set(project.file("src/desktopMain/resources/logo.ico"))
+                iconFile.set(project.file("src/desktopMain/resources/icon.ico"))
             }
             macOS {
                 iconFile.set(project.file("src/desktopMain/resources/logo.icns"))
