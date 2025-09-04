@@ -17,8 +17,8 @@ class ApiHourlyMapper: ApiMapper<Hourly, HourlyDto> {
         )
     }
 
-    private fun parseTime(time: List<String>, timeZone: String): List<String> {
-        return time.map { Util.formatUnixToDay(it.toLong(), timeZone) }
+    private fun parseTime(time: List<Long>, timeZone: String): List<String> {
+        return time.map { Util.formatUnixToHour(it, timeZone) }
     }
 
     private fun parseWeatherStatus(code: List<Int>): List<WeatherInfoItem> {

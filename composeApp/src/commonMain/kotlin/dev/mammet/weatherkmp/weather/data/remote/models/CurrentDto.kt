@@ -13,7 +13,7 @@ data class CurrentDto(
     @SerialName("temperature_2m")
     val temperature2m: Double = 0.0,
     @SerialName("time")
-    val time: String = "",
+    val time: Int = 0,
     @SerialName("weather_code")
     val weatherCode: Int = 0,
     @SerialName("wind_direction_10m")

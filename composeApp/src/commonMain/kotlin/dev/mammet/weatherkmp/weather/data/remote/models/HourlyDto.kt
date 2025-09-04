@@ -9,7 +9,7 @@ data class HourlyDto(
     @SerialName("temperature_2m")
     val temperature2m: List<Double> = listOf(),
     @SerialName("time")
-    val time: List<String> = listOf(),
+    val time: List<Long> = listOf(),
     @SerialName("weather_code")
     val weatherCode: List<Int> = listOf()
 )

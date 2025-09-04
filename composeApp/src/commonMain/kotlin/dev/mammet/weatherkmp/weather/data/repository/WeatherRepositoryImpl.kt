@@ -32,7 +32,7 @@ class WeatherRepositoryImpl(
     ) {
         weatherRemoteApiService.fetchWeather(
             latitude = latitude, longitude = longitude, timeZone = timeZone
-        ).map { response -> response.map { mapper.mapToDomain(it) } }
+        ).map { response -> response.map { mapper.mapToDomain(it, timeZone = timeZone) } }
             .onEach { result ->
                 _weatherData.update { result }
             }.launchIn(external)

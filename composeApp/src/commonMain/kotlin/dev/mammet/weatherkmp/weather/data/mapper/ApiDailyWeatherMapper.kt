@@ -17,14 +17,14 @@ class ApiDailyWeatherMapper : ApiMapper<Daily, DailyDto> {
             weatherStatus = parseWeatherStatus(model.weatherCode),
             windDirection = parseWeatherDirection(model.windDirection10mDominant),
             windSpeed = model.windSpeed10mMax,
-            sunrise = model.sunrise.map { Util.formatUnixToHour(it.toLong(), timeZone) },
-            sunset = model.sunset.map { Util.formatUnixToHour(it.toLong(), timeZone) },
+            sunrise = model.sunrise.map { Util.formatUnixToHour(it, timeZone) },
+            sunset = model.sunset.map { Util.formatUnixToHour(it, timeZone) },
             uvIndex = model.uvIndexMax,
         )
     }
 
-    private fun parseTime(time: List<String>, timeZone: String): List<String> {
-        return time.map { Util.formatUnixToDay(it.toLong(), timeZone) }
+    private fun parseTime(time: List<Long>, timeZone: String): List<String> {
+        return time.map { Util.formatUnixToDay(it, timeZone) }
     }
 
     private fun parseWeatherStatus(code: List<Int>): List<WeatherInfoItem> {

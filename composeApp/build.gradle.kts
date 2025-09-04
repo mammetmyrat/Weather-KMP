@@ -130,6 +130,17 @@ compose.desktop {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "dev.mammet.weatherkmp"
             packageVersion = "1.0.0"
+
+            windows {
+                iconFile.set(project.file("src/desktopMain/resources/logo.ico"))
+            }
+            macOS {
+                iconFile.set(project.file("src/desktopMain/resources/logo.icns"))
+            }
+            linux {
+                iconFile.set(project.file("src/desktopMain/resources/logooo.png"))
+            }
         }
+
     }
 }

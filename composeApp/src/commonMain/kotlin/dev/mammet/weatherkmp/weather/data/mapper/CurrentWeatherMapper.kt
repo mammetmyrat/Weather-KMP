@@ -12,7 +12,7 @@ class CurrentWeatherMapper: ApiMapper<CurrentWeather, CurrentDto> {
     ): CurrentWeather {
         return CurrentWeather(
             temperature = model.temperature2m,
-            time = parseTime(model.time, timeZone),
+            time = parseTime(model.time.toString(), timeZone),
             weatherStatus = parseWeatherStatus(model.weatherCode),
             windDirection = parseWeatherDirection(model.windDirection10m),
             windSpeed = model.windSpeed10m,

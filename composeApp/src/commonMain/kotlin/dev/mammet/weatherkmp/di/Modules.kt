@@ -12,7 +12,9 @@ import dev.mammet.weatherkmp.geo_location.data.remote.models.GeolocationRemoteAp
 import dev.mammet.weatherkmp.geo_location.data.repository.GeolocationRepositoryImpl
 import dev.mammet.weatherkmp.geo_location.domain.models.Geolocation
 import dev.mammet.weatherkmp.geo_location.domain.repository.GeolocationRepository
+import dev.mammet.weatherkmp.ui.daily.DailyViewModel
 import dev.mammet.weatherkmp.ui.home.HomeViewModel
+import dev.mammet.weatherkmp.ui.weather.WeatherViewModel
 import dev.mammet.weatherkmp.utils.provideExternalCoroutineScope
 import dev.mammet.weatherkmp.weather.data.mapper.ApiDailyWeatherMapper
 import dev.mammet.weatherkmp.weather.data.mapper.ApiHourlyMapper
@@ -59,4 +61,6 @@ val sharedModule = module {
     singleOf(::WeatherRepositoryImpl).bind<WeatherRepository>()
 
     viewModelOf(::HomeViewModel)
+    viewModelOf(::WeatherViewModel)
+    viewModelOf(::DailyViewModel)
 }
